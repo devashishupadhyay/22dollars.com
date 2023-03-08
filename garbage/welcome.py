@@ -1,6 +1,4 @@
 import streamlit as st
-from streamlit_card import card
-
 
 def welcome_cont(name, status=False):
     cont = st.empty()
