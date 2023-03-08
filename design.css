@@ -1,0 +1,16 @@
+[class="css-zt5igj e16nr0p31"]>span{
+    text-align: center;
+}
+
+/* [data-testid="stForm"]>[data-testid="stMarkdownContainer"]>p{
+    background-color: aqua;
+} */
+[class="element-container css-1gay1jh e1tzin5v1"]>[class="stMarkdown"]>[data-testid="stMarkdownContainer"]>P{
+    background-color: #062f56;
+    border: 10%;
+}
+
+[class="row-widget stButton"]>button{
+    height: 50;
+    width: 50;
+}
