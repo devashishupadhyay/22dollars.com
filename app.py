@@ -1,9 +1,9 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 from streamlit_option_menu import option_menu
-from pages.post_add import post_add, post_submit
-from pages.view_jobs import display_view_posts
-from pages.home import display_home
+from emplyr_pages.post_add import post_add, post_submit
+from emplyr_pages.view_jobs import display_view_posts
+from emplyr_pages.home import display_home
 from yaml.loader import SafeLoader
 import yaml
 import json
@@ -23,6 +23,58 @@ def load_from_json(fname):
     f.close()
     return a
 
+#-----------------------------------------------------------------------------------------------------------
+#LOGO CODE
+st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="navbar-logo">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="https://i.ibb.co/HVjwQkg/cover-better.png" alt="Logo" width="255.6" height="35" align="center">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <!-- Remove all list items -->
+    </ul>
+  </div>
+</nav>
+</div>
+""", unsafe_allow_html=True)
+hide_streamlit_style = """
+                <style>
+                div[data-testid="stToolbar"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+                }
+                div[data-testid="stDecoration"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+                }
+                div[data-testid="stStatusWidget"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+                }
+                #MainMenu {
+                visibility: hidden;
+                height: 0%;
+                }
+                header {
+                visibility: hidden;
+                height: 0%;
+                }
+                footer {
+                visibility: hidden;
+                height: 0%;
+                }
+                </style>
+                """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+#----------------------------------------------------------------------------------------------------------------
 
 authenticator = stauth.Authenticate(
     config['credentials'],
@@ -33,10 +85,13 @@ authenticator = stauth.Authenticate(
 )
 
 
-st.write(
-    '<style>div.block-container{padding-top:1px;}</style>', unsafe_allow_html=True)
-
-st.header("22dollars.com.au")
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-top: 0rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 local_css("design.css")
 
@@ -69,11 +124,3 @@ elif authentication_status is False:
 
 elif authentication_status is None:
     st.warning('Please enter your username and password')
-
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)

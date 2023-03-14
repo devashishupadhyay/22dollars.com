@@ -53,4 +53,4 @@ def display_view_posts(a):
                 cont.write(f"Job Id {l[0]} removed successfully")
         with col3:
             st.button(key=f"Recommendations{l[0]}",
-                      label="Employee Recommendations")
+                      label="AI Leads")
