@@ -116,7 +116,20 @@ if authentication_status:
         display_home(name)
 
     if MENU == "Settings":
-        authenticator.logout('Logout', 'main')
+        a,b,c,d=st.columns(4)
+        e,f,g,h= st.columns(4)
+        with a:
+            authenticator.logout('Logout', 'main')
+        with b:
+            st.button("Settings")
+        with c:
+            st.button("Profile")
+        with d:
+            st.button("Go Pro+")
+        with e:
+            st.button("Contact Us")
+        with f:
+             st.button("T&c")
 
 #--------------------------------------------------------------------------------------------------------------------------------#
 elif authentication_status is False:

@@ -12,12 +12,15 @@
 }
   
 [data-testid="stForm"]{
-    background-color: rgba(227, 36, 49, 0.2)
+    background-color: rgba(227, 36, 49,0.8);
+    /* font-size: 80px; */
 }
 
 [data-testid="stAppViewContainer"]{
     background-color: rgb(255, 255, 255);
-    background-image: url("https://i.ibb.co/TtT568w/9a663f3a-5a24-4b15-860e-1c3caa3917cd.png");
+    background-image: url("https://i.ibb.co/8mywtRW/istockphoto-1129644198-612x612.jpg");
+
+    /* background-image: url("https://i.ibb.co/TtT568w/9a663f3a-5a24-4b15-860e-1c3caa3917cd.png"); */
     background-size: cover;
     background-position: center;
 }
@@ -46,7 +49,7 @@
 
 [class="row-widget stButton"]>button{
   height: 3em;
-  width: 4em;
+  width: 6em;
   background-color: rgba(227, 36, 49, 0.4)
 }
 
