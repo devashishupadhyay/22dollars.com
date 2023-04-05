@@ -12,7 +12,7 @@
 }
   
 [data-testid="stForm"]{
-    background-color: rgba(227, 36, 49,0.8);
+    background-color: rgba(255, 75, 75,0.4);
     /* font-size: 80px; */
 }
 
@@ -47,13 +47,13 @@
 }
 
 [data-testid="stExpander"]{
-    background-color: rgba(227, 36, 49, 0.2)
+    background-color: rgba(255, 75, 75, 0.2)
 }
 
 [class="row-widget stButton"]>button{
   height: 3em;
   width: 6em;
-  background-color: rgba(227, 36, 49, 0.4)
+  background-color: rgba(255, 75, 75, 0.4)
 }
 
 [class="navbar-logo"]>nav{
