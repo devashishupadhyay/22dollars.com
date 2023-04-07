@@ -105,7 +105,7 @@ if authentication_status:
     if MENU == "New Job":
         post_job_object = post_add()
         if post_job_object[1]:
-            post_submit(post_job_object[0])
+            post_submit(post_job_object[0],post_job_object[2])
 
     if MENU == "View Jobs":
         a = load_from_json("posts.json")

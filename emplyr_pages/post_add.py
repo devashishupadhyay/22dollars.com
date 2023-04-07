@@ -25,17 +25,31 @@ def post_add():
         form.write("💡 Selecting “More than 4 years of experience” will be shown as “More than 4 years of relevant work experience required for this role” in the job ad.")
         jobDesp = form.text_area("Job Description")
         submit = form.form_submit_button("Post")
+        # if submit:
         data = {"hashJobId": hashJobId, "numApplicants": 0, "JobTitle": JobTitle, "jobType": jobType, "datePosted": datePosted, "visaSponsered": (
-            visaSponsered == True and "Work visa can be sponsered") or "No sponsorship", "experience": experience, "jobDesp": jobDesp}
+        visaSponsered == True and "Work visa can be sponsered") or "No sponsorship", "experience": experience, "jobDesp": jobDesp}
         # lst = []
         # js = json.dumps(data,indent=4)
         # lst.append(js)
         # with open('test.json','w') as test:
         #     json.dump(lst,test)
-    return cont, submit
+    return cont, submit,data
 
 
-def post_submit(cont):
+def post_submit(cont,data):
     cont = cont.empty()
     with cont.container():
-        cont.write("Your new job has been posted successfully 😊")
+        try:
+            with open('posts.json','r') as lt:
+                print(lt)
+                lst = json.load(lt)
+                
+            lt.close()
+            lst.append(data)
+            with open('posts.json','w') as test:
+                json.dump(lst,test)
+                cont.write("Your new job has been posted successfully 😊")
+
+        except:
+            cont.write("Error on backend! Contact ADMIN.")
+
