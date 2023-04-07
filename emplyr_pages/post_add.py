@@ -41,9 +41,7 @@ def post_submit(cont,data):
     with cont.container():
         try:
             with open('posts.json','r') as lt:
-                print(lt)
-                lst = json.load(lt)
-                
+                lst = json.load(lt)                
             lt.close()
             lst.append(data)
             with open('posts.json','w') as test:
