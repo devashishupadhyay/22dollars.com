@@ -25,6 +25,7 @@ def load_from_json(fname):
 
 #-----------------------------------------------------------------------------------------------------------
 #LOGO CODE
+st.set_page_config(page_title="21dolloars.com.au")
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 st.markdown("""
