@@ -59,7 +59,7 @@ def display_view_posts(a):
             ran = randint(0,9)
             co1,co2 = st.columns(2)
             with co1:
-                st.write(f"{names[ran]} can be a good fit for the role {l[2]}. To connect with them click on Hire/Contact button. This is a AI generated recommendation, T&c apply.")
+                st.write(f"{names[ran]} can be a good fit for the role of {l[2]}. To connect with them click on Hire/Contact button. This is a AI generated recommendation, T&c apply.")
             with co2:
                 st.button("Hire/Contact")
     return ai
