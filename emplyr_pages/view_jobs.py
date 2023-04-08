@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 from time import sleep
-
+from random import randint
 
 def load_from_json(fname):
     f = open(fname)
@@ -52,5 +52,14 @@ def display_view_posts(a):
                 delete_from_json(l[0])
                 cont.write(f"Job Id {l[0]} removed successfully")
         with col3:
-            st.button(key=f"Recommendations{l[0]}",
-                      label="AI Leads")
+            ai = st.button(key=f"Recommendations{l[0]}",
+                      label="Whom to hire? (AI)")
+        if ai:
+            names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah', 'Isaac', 'Jasmine']
+            ran = randint(0,9)
+            co1,co2 = st.columns(2)
+            with co1:
+                st.write(f"{names[ran]} can be a good fit for the role {l[2]}. To connect with them click on Hire/Contact button. This is a AI generated recommendation, T&c apply.")
+            with co2:
+                st.button("Hire/Contact")
+    return ai

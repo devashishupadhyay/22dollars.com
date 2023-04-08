@@ -110,7 +110,8 @@ if authentication_status:
 
     if MENU == "View Jobs":
         a = load_from_json("posts.json")
-        display_view_posts(a)
+        q = display_view_posts(a)
+        
         st.balloons()
 
     if MENU == "Home":
