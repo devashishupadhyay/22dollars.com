@@ -8,6 +8,10 @@ credentials:
       email: upadhyaydevashish@outlook.com
       name: Devashish
       password: $2b$12$JpRugcHNbdN2Eucj1xKib.JWhUibHH.cH7WEQi2zkTBrzk.kA1H7e #Pass hash
+    prof_arthur:
+      email: upadhyaydevashish@outlook.com
+      name: Arthur Tsang
+      password: $2b$12$JpRugcHNbdN2Eucj1xKib.JWhUibHH.cH7WEQi2zkTBrzk.kA1H7e #Pass hash
 cookie:
   expiry_days: 30
   key: some_signature_key # Must be string
